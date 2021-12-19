@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{859F15F7-6E45-4A26-9C5A-C054143465CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ECommerceDemo.BusinessLayer</RootNamespace>
+    <AssemblyName>ECommerceDemo.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EcommerceBAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerceDemo.Common\ECommerceDemo.Common.csproj">
+      <Project>{bca82ce3-b56f-4a1f-b23a-2a7450fba71d}</Project>
+      <Name>ECommerceDemo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECommerceDemo.DataTransferObjects\ECommerceDemo.DataTransferObjects.csproj">
+      <Project>{ba52b2eb-d6bb-4158-948d-1aa17f09d5d2}</Project>
+      <Name>ECommerceDemo.DataTransferObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECommerceDemo.Repository\ECommerceDemo.Repository.csproj">
+      <Project>{8d9430ad-e3d6-47a5-a45e-bd1c500e59c1}</Project>
+      <Name>ECommerceDemo.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECommerceDemo.UnitOfWork\ECommerceDemo.UnitOfWork.csproj">
+      <Project>{6a064f48-3fdc-475e-b59f-200c00a84757}</Project>
+      <Name>ECommerceDemo.UnitOfWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
